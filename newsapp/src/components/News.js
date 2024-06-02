@@ -2,20 +2,168 @@ import React, { Component } from 'react'
 import NewsItem from './NewsItem'
 
 export class News extends Component {
+
+  articles=[
+    {
+      "source": {
+        "id": "bbc-news",
+        "name": "BBC News"
+      },
+      "author": "BBC News",
+      "title": "Spain holidays: Balearic Islands to expand anti-tourism law",
+      "description": "The popular tourist spot says it will expand an anti-tourism law.",
+      "url": "https://www.bbc.co.uk/news/articles/cp3geyyen65o",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/4cc2/live/42c3a510-0ecc-11ef-ae5b-6f3cb4b494be.jpg",
+      "publishedAt": "2024-05-10T13:52:16.5911486Z",
+      "content": "Spain's Balearic Islands are expanding curbs on street drinking and further restricting party boats in a bid to crack down on alcohol-fuelled holidays in tourist areas.\r\nThe government says the tough… [+1863 chars]"
+    },
+    {
+      "source": {
+        "id": "bbc-news",
+        "name": "BBC News"
+      },
+      "author": "BBC News",
+      "title": "India election: Modi's divisive campaign rhetoric raises questions",
+      "description": "The Indian PM's remarks against Muslims on the election trail have puzzled many. What is going on?",
+      "url": "https://www.bbc.co.uk/news/world-asia-india-68982352",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/6D7D/production/_133292082_gettyimages-2151283121.jpg",
+      "publishedAt": "2024-05-10T13:37:21.2169948Z",
+      "content": "In the lead-up to India's general election, Narendra Modi was expected to frame it as a referendum on his decade as prime minister. \r\nHe was expected to boast about achievements like generous welfare… [+7162 chars]"
+    },
+    {
+      "source": {
+        "id": "bbc-news",
+        "name": "BBC News"
+      },
+      "author": "BBC News",
+      "title": "Virginia school board votes to restore Confederate names",
+      "description": "In a first for the US, two Virginia schools will have their original Confederate names reinstated.",
+      "url": "https://www.bbc.co.uk/news/world-us-canada-68985412",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/2859/production/_133292301_gettyimages-1923326032.jpg",
+      "publishedAt": "2024-05-10T12:37:19.982496Z",
+      "content": "A Virginia school board has approved a motion for two schools to revert to their Confederate names following a debate that bitterly divided a town.\r\nThe Shenandoah County School Board voted 5-1 to re… [+3707 chars]"
+    },
+    {
+      "source": {
+        "id": "bbc-news",
+        "name": "BBC News"
+      },
+      "author": "BBC News",
+      "title": "Marjorie Taylor Greene defiant after failing to remove House Speaker Mike Johnson",
+      "description": "The House killed the far-right Republican's motion to remove Mike Johnson over support for Ukraine aid.",
+      "url": "https://www.bbc.co.uk/news/world-middle-east-68981084",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1318/production/_133288840_gettyimages-2151394233.jpg",
+      "publishedAt": "2024-05-10T12:22:14.0758279Z",
+      "content": "Media caption, Watch: The moment Marjorie Taylor Greene gets booed in House chamber\r\nRepublican congresswoman Marjorie Taylor Greene has struck a defiant tone after the failure of her bid to remove M… [+3709 chars]"
+    },
+    {
+      "source": {
+        "id": "bbc-news",
+        "name": "BBC News"
+      },
+      "author": "BBC News",
+      "title": "Harry and Meghan: Duke and duchess arrive in Nigeria",
+      "description": "The couple's visit to promote the Invictus Games comes after the duke made a short visit to London.",
+      "url": "https://www.bbc.co.uk/news/articles/cp4g9zzeql1o",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/8e62/live/d385b880-0eaa-11ef-b9d8-4f52aebe147d.jpg",
+      "publishedAt": "2024-05-10T11:52:25.3723248Z",
+      "content": "The couple landed in Abuja on Friday morning, and began their visit with a tour of Lightway Academy, a primary and secondary school in the capital city.\r\nThey were greeted by traditional dancers and … [+882 chars]"
+    },
+    {
+      "source": {
+        "id": "bbc-news",
+        "name": "BBC News"
+      },
+      "author": "BBC News",
+      "title": "Ukraine says it repulsed Russian bid to cross border",
+      "description": "The attempt came during an attack on a town in the northeastern Kharkiv region, says the military.",
+      "url": "https://www.bbc.co.uk/news/articles/c6pyv8q94g1o",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/b2e2/live/7ecd9ee0-0ebc-11ef-8f3e-f3c169ee7041.jpg",
+      "publishedAt": "2024-05-10T11:37:19.3886873Z",
+      "content": "Russia's border actions were predictable, said the head of Ukraine's centre for countering disinformation, Andri Kovalenko.\r\nRussia had the resources to aggravate the situation in border areas but no… [+428 chars]"
+    },
+    {
+      "source": {
+        "id": "bbc-news",
+        "name": "BBC News"
+      },
+      "author": "BBC News",
+      "title": "Zelensky fires head of bodyguard after failed plot",
+      "description": "No reason was given for Serhiy Rud's dismissal. He has led the president's security detail since 2019.",
+      "url": "https://www.bbc.co.uk/news/articles/c4n1j0l8111o",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/cde1/live/e9c79dd0-0ea9-11ef-8380-ed08c6be674e.jpg",
+      "publishedAt": "2024-05-10T09:52:13.7489918Z",
+      "content": "The two colonels in the state guard who were detained on Tuesday are suspected of belonging to a network of agents run by Russia's FSB security service.\r\nMr Zelensky has spoken of repeated Russian pl… [+1716 chars]"
+    },
+    {
+      "source": {
+        "id": "bbc-news",
+        "name": "BBC News"
+      },
+      "author": "BBC News",
+      "title": "Trump's former aide tells how he dictated tweets",
+      "description": "Madeleine Westerhout tells ex-president's trial that he liked capitals and exclamation marks.",
+      "url": "https://www.bbc.co.uk/news/world-us-canada-68987594",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1138B/production/_133293507_gettyimages-913604270.jpg",
+      "publishedAt": "2024-05-10T05:52:15.4830413Z",
+      "content": "Donald Trump dictated his tweets and demanded capitals and exclamation marks, a former aide told his trial.\r\nMadeleine Westerhout said Mr Trump preferred her to take notes rather than write himself. … [+2243 chars]"
+    },
+    {
+      "source": {
+        "id": "bbc-news",
+        "name": "BBC News"
+      },
+      "author": "BBC News",
+      "title": "Tracking down Scorpion, Europe's most wanted migrant-smuggler",
+      "description": "Barzan Majeed, aka Scorpion, is on the run after smuggling thousands of migrants into the UK.",
+      "url": "https://www.bbc.co.uk/news/articles/c3g92zkd7n4o",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/13b4/live/34bea260-0c8f-11ef-b9d8-4f52aebe147d.png",
+      "publishedAt": "2024-05-10T05:07:15.4033602Z",
+      "content": "Barzan Majeed looked like an affluent golfer. He was smartly dressed, in new jeans, a light-blue shirt and a black gilet.\r\nWhen he put his hands on the table, I saw his fingernails were manicured.\r\nM… [+1641 chars]"
+    },
+    {
+      "source": {
+        "id": "bbc-news",
+        "name": "BBC News"
+      },
+      "author": "BBC News",
+      "title": "Gaza war: Netanyahu says Israel can 'stand alone' if US halts arms shipments",
+      "description": "Israeli leader says his country will \"stand alone\" and \"fight with fingernails\" if shipments are halted.",
+      "url": "https://www.bbc.co.uk/news/world-middle-east-68980826",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/53BF/production/_133293412_netanyahu.jpg",
+      "publishedAt": "2024-05-09T23:52:13.4948544Z",
+      "content": "Benjamin Netanyahu has said Israel can \"stand alone\" after the US warned it could halt arms shipments if the Israeli prime minister ordered a full-scale invasion of Rafah in Gaza.\r\n\"If we need to ...… [+4250 chars]"
+    }
+  ]
+  constructor(){
+    super(); 
+    console.log("hello i am a constructor from news component!");
+    this.state={
+      articles:this.articles
+    }
+  }
+
+  async componentDidMount(){
+    let url="https://newsapi.org/v2/top-headlines?country=us&apiKey=517adc93777d4e57939c59fa3b481d30";
+    let data = await fetch(url);
+    let parsedData= await data.json();
+    console.log(data);
+    this.setState({articles: parsedData.articles});
+  }
+
   render() {
     return (
       <div className='container my-3'>
         <h2>NewsMonkey - top news</h2>
+        
         <div className='row'>
-          <div className='col-md-3'>
-            <NewsItem title="myTitle" description="This ia a test"/>
+          {this.state.articles.map((element)=>{
+            return <div className='col-md-3 my-3' key={element.url}>
+            <NewsItem  title={element.title?element.title.slice(0,45)+"...":""} description={element.description?element.description.slice(0,88)+"...":""} imageUrl={element.urlToImage} newsUrl={element.url} />
           </div>
-          <div className='col-md-3'>
-            <NewsItem title="myTitle" description="This ia a test"/>
-          </div>
-          <div className='col-md-3'>
-            <NewsItem title="myTitle" description="This ia a test"/>
-          </div>
+          })}
+          
+          
         </div>
       </div>
     )
